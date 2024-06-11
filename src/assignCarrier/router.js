@@ -1,0 +1,14 @@
+const express = require("express");
+const controller = require("./controller");
+const router = express.Router();
+router.get("/all", controller.getAll);
+router.get("/details", controller.getOne);
+router.get("/getByCarrier", controller.getByCarrier);
+router.get("/getBySP", controller.getBySP);
+router.get("/getByMNO", controller.getByMNO);
+router.post("/", controller.create);
+router.post("/addNew", controller.addNew);
+router.patch("/removeCarrier", controller.removeCarrier);
+router.patch("/", controller.update);
+router.delete("/", controller.delete);
+module.exports = router;
